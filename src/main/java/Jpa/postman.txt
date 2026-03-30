@@ -1,0 +1,69 @@
+                ONE TO MANY
+
+lihat : @GetMapping
+
+@PostMapping
+http://localhost:8081/users
+{
+  "name": "Jourdyy",
+  "email": "jourdy@gmail.com"
+}
+
+Tambah role
+http://localhost:8081/roles
+{
+  "roleName": "Admin",
+  "user": {
+    "id": 1
+  }
+}
+
+Tambah ulang
+{
+  "roleName": "User",
+  "user": {
+    "id": 1
+  }
+}
+
+
+                MANY TO MANY
+
+Tambah role dulu
+
+{
+  "roleName": "Admin"
+}
+
+Tambah ulang
+
+{
+  "roleName": "User"
+}
+
+Tambah user deng role
+
+{
+  "name": "vandy",
+  "email": "vandy@gmail.com",
+  "roles": [
+    {
+      "roleName": "Admin"
+    },
+    {
+      "roleName": "User"
+    }
+  ]
+}
+
+Tambah user ka 2
+
+{
+  "name": "indah",
+  "email": "indah@gmail.com",
+  "roles": [
+    {
+      "roleName": "Admin"
+    }
+  ]
+}
